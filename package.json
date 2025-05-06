@@ -1,0 +1,40 @@
+{
+  "name": "task-queue-processor",
+  "version": "1.0.0",
+  "description": "A simple task queue server with custom in-memory pub/sub and async processing. Built in Node.js without external brokers like Redis or RabbitMQ.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rmdir /s /q dist && mkdir dist",
+    "compile": "tsc -p .",
+    "prepare": "npm run clean && npm run compile",
+    "lint": "gts check",
+    "fix": "gts fix",
+    "start": "node dist/src/index.js",
+    "format-fix": "prettier --write 'src/**/*.{ts,js,json,md}'",
+    "format-check": "prettier --check 'src/**/*.{ts,js,json,md}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulazeem-tk4vr/task-queue-processor.git"
+  },
+  "keywords": [
+    "Pub/Sub",
+    "worker",
+    "threads"
+  ],
+  "author": "Abdul Azeem Shaik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulazeem-tk4vr/task-queue-processor/issues"
+  },
+  "homepage": "https://github.com/abdulazeem-tk4vr/task-queue-processor#readme",
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "gts": "^6.0.2",
+    "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "uuid": "^11.1.0"
+  }
+}
